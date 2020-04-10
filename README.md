@@ -2,21 +2,42 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # FUNDAMENTOS DE REDUX
 
-Librería que nos permite almacenar y gestionar el estado de nuestras apps.
+## Ejemplo de Store, Reducer, Acciones con Redux
 
-Todo el estado es almacenado en un único lugar, el Store.
+### Instalación
 
-Desde el cual podemos consumirlo desde cualquier componente.
+```
+npm i redux
+```
 
-Actualizar información dentro del estado a través de acciones.
+### Función Pura
 
-De esta manera no tenemos que pasar el estado a través de las props, cómo lo haciamos normalmente. (flujo de información)
+Principios claves:
 
-> Actualmente ya existe lo que se llama **REACT API CONTEXT**, con el cual podemos tener un comportamiento bastante similar.
+1. Dentro de una función pura no podemos retornar valores aleatorios, como por ejemplo a traves de Math.random().
 
-REDUX STORE: centralizado, inmutable (*actualizado mediante acciones*)
+Lo que si podemos hacer es pasarle los valores aleatorios a traves de sus parámetros.
 
-REDUX STORE: posibilidad de: consumir estado, emitir acciones.
+2. Dentro de estas funciones no podemos crear o generar efectos segundarios.
+
+un efecto segundario es por ejemplo la modificación de una variable que se encuntra fuera del ambito (contexto) de está función.
+
+### Funciones Reductoras
+
+Podemos ponerles cualquier nombre, siempre y cuando sean nombre expresivos o declarativos.
+
+En este caso como por ejemplo vamos a almacenar el estado de un contador de clicks, le voy a poner el reducer como *Counter*.
+
+Las funciones *Reducer* dentro de Redux, reciben dos *parámetros*, estado actual y una acción.
+
+En el punto de su definición debemos pasarle el estado inicial, como estamos usando EMC6. state = initialState.
+
+La función Reducer va a retornar el estado actual.
+
+
+
+
+
 
 ## Available Scripts
 
