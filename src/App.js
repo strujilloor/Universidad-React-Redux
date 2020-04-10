@@ -1,4 +1,5 @@
 import React from 'react'
+import './store' // Importamos el archivo como tal : 
 
 const App = () => {
   return (
